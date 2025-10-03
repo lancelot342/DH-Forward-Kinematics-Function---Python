@@ -1,4 +1,46 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) 
+
+# Proyecto de Cinemática Directa de Robots
+
+## Introducción
+Este proyecto tiene como objetivo implementar la cinemática directa simbólica de tres robots manipuladores utilizando Python.  
+Los robots analizados son: un robot planar de dos grados de libertad (RR), un robot antropomórfico de tres grados de libertad (RRR) y un robot con configuración SCARA (RRP).  
+La cinemática directa permite obtener la posición y orientación del efector final del robot en función de los ángulos de sus articulaciones.
+
+## Metodología
+Para el desarrollo del proyecto se siguieron los siguientes pasos:
+
+1. **Repositorio base:**  
+   Se clonó el repositorio [DH-Forward-Kinematics-Function](https://github.com/SolKacil/DH-Forward-Kinematics-Function---Python) que contiene funciones para calcular la cinemática directa de robots a partir de sus parámetros Denavit-Hartenberg (DH).
+
+2. **Implementación en Python:**  
+   - Se crearon archivos separados para cada robot: `RR.py`, `RRR.py` y `SCARA.py`.  
+   - Cada archivo contiene los parámetros DH específicos del robot según las tablas del libro *Control de robots manipuladores* de Fernando Reyes Cortes (páginas 226-237).  
+   - Se utilizó **SymPy** para manejar variables simbólicas y calcular las matrices de transformación homogénea.  
+   - Se imprimieron en la terminal las matrices de transformación homogénea que representan la posición y orientación del efector final de cada robot.
+
+3. **Documentación en el código:**  
+   - Se añadieron comentarios en cada línea o bloque relevante del código para explicar su función.  
+   - Se indicó claramente dónde se ingresan los parámetros DH, cómo se calculan las matrices y cómo se muestran los resultados.
+
+4. **Verificación de resultados:**  
+   - Se compararon los resultados obtenidos con los ejemplos y resultados del libro para asegurar que la implementación fuera correcta.  
+   - Se verificó que las matrices fueran consistentes y reflejaran correctamente la cinemática de cada robot.
+
+## Resultados
+- Se logró implementar con éxito la cinemática directa simbólica de los tres robots.  
+- Cada robot tiene un archivo Python independiente que permite calcular y visualizar la matriz de transformación homogénea de manera simbólica.  
+- El código es modular, fácil de modificar y reutilizable para otros robots si se requieren cambios en los parámetros DH.
+
+## Conclusión
+El proyecto permitió comprender y aplicar los conceptos de cinemática directa de robots manipuladores, así como el uso de Python y SymPy para cálculos simbólicos.  
+Se logró un entendimiento práctico de cómo los parámetros DH determinan la posición y orientación del efector final, y cómo validar resultados con la bibliografía.
+
+## Referencias
+- Fernando Reyes Cortes, *Control de robots manipuladores*.  
+- Código base: [Repositorio DH-Forward-Kinematics](https://github.com/SolKacil/DH-Forward-Kinematics-Function---Python)
+
+
 # DH Forward Kinematics Python
 
 This project provides tools to compute the forward kinematics of serial robotic manipulators using Denavit-Hartenberg (DH) parameters. It supports both numerical and symbolic calculations, making it useful for both simulation and analytical studies.
