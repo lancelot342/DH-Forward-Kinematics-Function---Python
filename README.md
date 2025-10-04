@@ -1,5 +1,8 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) 
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe131e27499d2ff2e1400ed4d56dc0da03d83e69
 # Proyecto de Cinemática Directa de Robots
 
 ## Introducción
