@@ -9,9 +9,24 @@
 Este proyecto tiene como objetivo implementar la cinemática directa simbólica de tres robots manipuladores utilizando Python.  
 Los robots analizados son: un robot planar de dos grados de libertad (RR), un robot antropomórfico de tres grados de libertad (RRR) y un robot con configuración SCARA (RRP).  
 La cinemática directa permite obtener la posición y orientación del efector final del robot en función de los ángulos de sus articulaciones.
+En este trabajo se analizaron los siguientes robots, descritos en el libro *Control de robots manipuladores* de **Fernando Reyes Cortes** (páginas 226 a 237):
 
+1. **Robot RR (planar de dos grados de libertad)**  
+   - Robot de dos articulaciones rotacionales.  
+   - Se empleó la cinemática directa para determinar la posición del efector final en el plano, calculando las transformaciones homogéneas entre eslabones.
+
+2. **Robot RRR (antropomórfico de tres grados de libertad no planar)**  
+   - Robot de tres articulaciones rotacionales.  
+   - Se utilizó la cinemática directa para obtener la orientación y posición tridimensional del efector final, considerando los tres ejes de rotación no coplanares.
+
+3. **Robot SCARA (configuración RRP)**  
+   - Robot con dos articulaciones rotacionales y una prismática.  
+   - La cinemática directa permitió determinar la posición vertical y radial del efector final, muy común en aplicaciones de ensamblaje.
+   
 ## Metodología
 Para el desarrollo del proyecto se siguieron los siguientes pasos:
+
+
 
 1. **Repositorio base:**  
    Se clonó el repositorio [DH-Forward-Kinematics-Function](https://github.com/SolKacil/DH-Forward-Kinematics-Function---Python) que contiene funciones para calcular la cinemática directa de robots a partir de sus parámetros Denavit-Hartenberg (DH).
@@ -25,6 +40,11 @@ Para el desarrollo del proyecto se siguieron los siguientes pasos:
 3. **Documentación en el código:**  
    - Se añadieron comentarios en cada línea o bloque relevante del código para explicar su función.  
    - Se indicó claramente dónde se ingresan los parámetros DH, cómo se calculan las matrices y cómo se muestran los resultados.
+   3.1 **Aplicación de la cinemática directa:**  
+   - Para cada robot, se construyeron las matrices de transformación entre eslabones usando los parámetros DH.  
+   - Posteriormente, se multiplicaron las matrices homogéneas para obtener la **matriz total de transformación** desde la base hasta el efector final.  
+   - Esta matriz final describe tanto la **posición (componentes Px, Py, Pz)** como la **orientación (rotaciones respecto a los ejes X, Y, Z)** del efector.
+
 
 4. **Verificación de resultados:**  
    - Se compararon los resultados obtenidos con los ejemplos y resultados del libro para asegurar que la implementación fuera correcta.  
