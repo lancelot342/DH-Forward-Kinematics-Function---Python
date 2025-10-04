@@ -14,11 +14,13 @@ print(H_class)
 
 # symbolic example: 2-joint planar robot 
 print("\nSymbolic example:")
-q1, q2 = sp.symbols('q1 q2')
-l1, l2 = sp.symbols('l1 l2')
+q1, q2, = sp.symbols('q1 q2')
+l1, l2, = sp.symbols('l1 l2')
+d3 = sp.symbols('d3')
 dh_params_sym = [
     [q1, 0, l1, 0],
-    [q2, 0, l2, 0],
+    [q2, 0, l2, sp.pi],
+    [0, d3, 0, 0],
 ]
 H_sym_class = ForwardKinematicsDH.symbolic(dh_params_sym)
 print("End-effector transformation matrix:")
